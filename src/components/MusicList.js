@@ -10,6 +10,7 @@ const MusicList = ({data}) => {
       title={song["im:name"].label}
       artist={song["im:artist"].label}
       image={song["im:image"][1].label}
+      link={song.link[1].attributes.href}
     />
   })
 
