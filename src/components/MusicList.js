@@ -1,11 +1,21 @@
 import React from 'react';
 import MusicItem from './MusicItem.js';
 
-const MusicList = (props) => {
+const MusicList = ({data}) => {
+
+  const songs = data.map( (song, index) => {
+    return <MusicItem
+      key={index}
+      position={index+1}
+      title={song["im:name"].label}
+      artist={song["im:artist"].label}
+      image={song["im:image"][1].label}
+    />
+  })
+
   return (
     <div className="list">
-      <h3>LIST</h3>
-      <MusicItem />
+      {songs}
     </div>
   )
 }

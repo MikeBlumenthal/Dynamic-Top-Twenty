@@ -1,9 +1,16 @@
 import React from 'react';
 
-const MusicItem = (props) => {
+const MusicItem = ({position, artist, title, image}) => {
   return (
     <div className="item">
-      <p>I AM AN ITEM</p>
+      <h2 className="position">#{position}</h2>
+      <p>
+        <img src={image} alt="record-cover" />
+        {title}
+      </p>
+      <p>
+        {artist}
+      </p>
     </div>
   )
 }

@@ -24,7 +24,6 @@ class MusicBox extends Component{
   render(){
     return(
       <div className="box">
-        <h2>BOX</h2>
         <MusicList data={this.state.data}/>
       </div>
     )
